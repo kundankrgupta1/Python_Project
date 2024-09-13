@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snippet Created</title>
+</head>
+<body>
+    <h1>Snippet Created!</h1>
+    <p>Your snippet has been created successfully.</p>
+    <p>Snippet ID: {{ snippet_id }}</p>
+    {% if key %}
+        <p>Secret Key: {{ key }}</p>
+    {% else %}
+        <p>No secret key was generated. You can still view the snippet without a key.</p>
+    {% endif %}
+    <a href="{{ url_for('view_snippet', snippet_id=snippet_id) }}">View Snippet</a>
+</body>
+</html>

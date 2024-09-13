@@ -1,0 +1,8 @@
+{% if content %}
+    <p>Snippet Content: {{ content }}</p>
+{% else %}
+    <form method="post">
+        <input type="text" name="secret_key" placeholder="Enter the secret key to view the snippet"><br>
+        <input type="submit" value="Decrypt Snippet">
+    </form>
+{% endif %}

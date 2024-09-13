@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nifty 50 Data</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 20px;
+            width: 250px;
+        }
+        .card h3 {
+            margin: 0 0 10px;
+        }
+    </style>
+</head>
+<body>
+    {% if data %}
+        {% for item in data %}
+            <div class="card">
+                <h3>{{ item[0] }}</h3>
+                <p>{{ item[1] }}</p>
+                <!-- Add more fields as needed -->
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>No data available</p>
+    {% endif %}
+</body>
+</html>
